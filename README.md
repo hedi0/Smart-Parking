@@ -5,7 +5,9 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Version](https://img.shields.io/badge/Version-2.0.0-blue)
 
-A complete IoT-based smart parking system using ESP32 microcontroller with RFID authentication, ultrasonic sensors, servo-controlled gate, and Firebase cloud integration for real-time monitoring.
+&#x20; &#x20;
+
+A complete IoT-based smart parking system using an ESP32 microcontroller with RFID authentication, ultrasonic sensors, a servo‑controlled gate, and Firebase Realtime Database integration for real‑time monitoring.
 
 ## 📋 Table of Contents
 - [Features](#-features)
@@ -39,44 +41,43 @@ A complete IoT-based smart parking system using ESP32 microcontroller with RFID 
 ## 🛠️ Hardware Requirements
 
 ### Components List
-| Component | Quantity | Purpose |
-|-----------|----------|---------|
-| **ESP32 Dev Board** | 1 | Main microcontroller |
-| **MFRC522 RFID Module** | 1 | Card authentication |
-| **HC-SR04 Ultrasonic Sensors** | 3 | Distance measurement |
-| **SG90 Servo Motor** | 1 | Gate control |
-| **16x2 I2C LCD Display** | 1 | User interface |
-| **RGB LED** | 1 | Status indicator |
-| **Buzzer** | 1 | Audio feedback |
-| **Push Button** | 1 | Manual override |
-| **Jumper Wires** | - | Connections |
-| **Breadboard** | 1 | Prototyping |
-| **5V Power Supply** | 1 | System power |
+
+| Component                 | Quantity | Purpose             |
+| ------------------------- | -------- | ------------------- |
+| ESP32 Dev Board           | 1        | Main controller     |
+| MFRC522 RFID Module       | 1        | Card authentication |
+| HC‑SR04 Ultrasonic Sensor | 3        | Slot detection      |
+| SG90 Servo Motor          | 1        | Gate control        |
+| 16×2 I2C LCD              | 1        | User interface      |
+| RGB LED                   | 1        | Status indicator    |
+| Buzzer                    | 1        | Audio feedback      |
+| Push Button               | 1        | Manual override     |
+| Jumper Wires              | —        | Connections         |
+| Breadboard                | 1        | Prototyping         |
+| 5V Power Supply           | 1        | Servo power         |
 
 ### 🔌 Pin Connections
-| ESP32 Pin | Component | Connection |
-|-----------|-----------|------------|
-| **GPIO21** | RFID SS (SDA) | Pin 3 on MFRC522 |
-| **GPIO22** | RFID RST | Pin 9 on MFRC522 |
-| **GPIO18** | RFID SCK | Pin 5 on MFRC522 |
-| **GPIO19** | RFID MISO | Pin 6 on MFRC522 |
-| **GPIO23** | RFID MOSI | Pin 4 on MFRC522 |
-| **GPIO13** | Servo Motor | Signal (orange wire) |
-| **GPIO32** | Ultrasonic 1 Trigger | HC-SR04 Trig |
-| **GPIO26** | Ultrasonic 1 Echo | HC-SR04 Echo |
-| **GPIO33** | Ultrasonic 2 Trigger | HC-SR04 Trig |
-| **GPIO27** | Ultrasonic 2 Echo | HC-SR04 Echo |
-| **GPIO25** | Ultrasonic 3 Trigger | HC-SR04 Trig |
-| **GPIO14** | Ultrasonic 3 Echo | HC-SR04 Echo |
-| **GPIO4** | RGB LED Red | Anode (via 220Ω resistor) |
-| **GPIO2** | RGB LED Green | Anode (via 220Ω resistor) |
-| **GPIO15** | RGB LED Blue | Anode (via 220Ω resistor) |
-| **GPIO12** | Buzzer | Positive terminal |
-| **GPIO0** | Push Button | One terminal (other to GND) |
-| **3.3V** | MFRC522 VCC | Pin 8 on MFRC522 |
-| **GND** | All components | Common ground |
 
-*Note: Connect all GND pins together. Servo motor requires 5V power.*
+| ESP32 Pin   | Component       | Description      |
+| ----------- | --------------- | ---------------- |
+| GPIO21      | RFID SDA (SS)   | MFRC522 SDA      |
+| GPIO22      | RFID RST        | MFRC522 RST      |
+| GPIO18      | RFID SCK        | SPI Clock        |
+| GPIO19      | RFID MISO       | SPI MISO         |
+| GPIO23      | RFID MOSI       | SPI MOSI         |
+| GPIO13      | Servo           | Control signal   |
+| GPIO32 / 26 | Ultrasonic 1    | Trig / Echo      |
+| GPIO33 / 27 | Ultrasonic 2    | Trig / Echo      |
+| GPIO25 / 14 | Ultrasonic 3    | Trig / Echo      |
+| GPIO4       | RGB LED (Red)   | 220Ω resistor    |
+| GPIO2       | RGB LED (Green) | 220Ω resistor    |
+| GPIO15      | RGB LED (Blue)  | 220Ω resistor    |
+| GPIO12      | Buzzer          | Positive pin     |
+| GPIO0       | Push Button     | Pull‑down to GND |
+| 3.3V        | MFRC522 VCC     | Power            |
+| GND         | All             | Common ground    |
+
+> ⚠️ **Note:** Power the servo with an external 5V supply and connect all grounds together.
 
 ## 📐 Schematic Diagram
 
@@ -118,7 +119,7 @@ A complete IoT-based smart parking system using ESP32 microcontroller with RFID 
      https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
      ```
   3. Go to **Tools → Board → Boards Manager**
-  4. Search for "ESP32" and install
+  4. Search for "**ESP32 by Espressif Systems**" and install
 
 ### 2. Install Required Libraries
 Open Arduino IDE and install these libraries via **Sketch → Include Library → Manage Libraries**:
@@ -179,7 +180,7 @@ String slotIDs[3] = {"A1", "B2", "C3"};
 ## ☁️ Firebase Setup
 
 ### 1. Create Firebase Project
-- Go to [Firebase Console]{https://console.firebase.google.com/}
+- Go to [**Firebase Console**](https://console.firebase.google.com/)            
 - Click "Add project"
 - Enter project name (e.g., "smart-parking")
 - Enable Google Analytics (optional)
@@ -208,6 +209,7 @@ Go to Rules tab and set:
   }
 }
 ```
+> ⚠️ Secure your rules before production use.
 For production, implement proper authentication
 
 ## 📥 Installation
@@ -215,7 +217,7 @@ For production, implement proper authentication
 ### 1. Upload Code to ESP32
 ```bash
 # Using Arduino IDE:
-1. Open `Smart-Parking.ino` in Arduino IDE
+1. Open `code.ino` in Arduino IDE
 2. Select Board: "ESP32 Dev Module"
 3. Select correct COM port
 4. Click Upload (→ button)
@@ -230,7 +232,7 @@ After uploading:
     Joining WiFi...
     Connected!
     My IP: 192.168.1.100
-    Connecting to cloud...
+    Connecting to Firebase...
     Connected!
     System is running
    ```
@@ -310,18 +312,12 @@ Monitor these messages in Serial Monitor (115200 baud):
 
 ## 📁 Project Structure
 
+```
 Smart-Parking/
 ├── code.ino # Main Arduino sketch
-├── LICENSE # License file
-├── README.md # This documentation
-├── images/ # Project images
-│ ├── schematic.png # Wiring diagram
-│ └── prototype.jpg # Physical setup
-├── firebase_rules.json # Firebase security rules
-└── docs/ # Additional documentation
-├── calibration.md # Sensor calibration guide
-└── troubleshooting.md # Detailed troubleshooting
-
+├── LICENSE # License file 
+└── README.md # This documentation
+```
 
 ## 🔄 Future Enhancements
 
