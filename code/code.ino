@@ -9,16 +9,17 @@
 #include "addons/RTDBHelper.h"
 
 // WiFi credentials
-const char* wifiName = "YOUR_WIFI_SSID";
-const char* wifiPass = "YOUR_WIFI_PASSWORD";
+const char* wifiName = "PASTE_YOUR_WIFI_SSID";
+const char* wifiPass = "PASTE_YOUR_WIFI_PASSWORD";
 
 // Firebase setup
 #define DATABASE_URL "https://your-project-id.firebaseio.com"
-#define API_KEY "YOUR_FIREBASE_API_KEY"
+#define API_KEY "PASTE_YOUR_FIREBASE_API_KEY"
 
 // Pin assignments
 #define RFID_RST 22
 #define RFID_SS 21
+
 const int servoPin = 13;
 const int openAngle = 90;
 const int closeAngle = 0;
