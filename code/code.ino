@@ -135,3 +135,36 @@ void loop() {
   }
 }
 
+void scanRFID() {
+  if (!rfid.PICC_IsNewCardPresent()) return;
+  if (!rfid.PICC_ReadCardSerial()) return;
+  
+  String cardCode = "";
+  for (byte i = 0; i < rfid.uid.size; i++) {
+    cardCode += (rfid.uid.uidByte[i] < 0x10 ? " 0" : " ");
+    cardCode += String(rfid.uid.uidByte[i], HEX);
+  }
+  cardCode.toUpperCase();
+  cardCode.trim();
+  
+  Serial.print("Card detected: ");
+  Serial.println(cardCode);
+  
+  bool validCard = false;
+  for (int i = 0; i < cardCount; i++) {
+    if (cardCode == allowedCards[i]) {
+      validCard = true;
+      break;
+    }
+  }
+  
+  if (validCard) {
+    grantAccess(cardCode);
+  } else {
+    denyAccess(cardCode);
+  }
+  
+  rfid.PICC_HaltA();
+  rfid.PCD_StopCrypto1();
+}
+
