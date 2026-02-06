@@ -197,3 +197,304 @@ void grantAccess(String card) {
   }
 }
 
+void denyAccess(String card) {
+  Serial.println("Access denied");
+  errorBeep();
+  badAttempts++;
+  
+  if (firebaseConnected) {
+    Firebase.RTDB.setInt(&dataStream, "/stats/bad_tries", badAttempts);
+    Firebase.RTDB.setString(&dataStream, "/logs/invalid_try", card + " @ " + getTime());
+  }
+  
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(red, LOW);
+    delay(200);
+    digitalWrite(red, HIGH);
+    delay(200);
+  }
+  
+  screen.clear();
+  screen.print("Card not recognized");
+  screen.setCursor(0, 1);
+  screen.print("Access blocked");
+  delay(2000);
+}
+
+void checkSlots() {
+  freeSlots = 0;
+  
+  for (int i = 0; i < 3; i++) {
+    float dist = measureDistance(i);
+    
+    if (dist > 0 && dist < 25.0) {
+      slots[i] = true;
+    } else {
+      slots[i] = false;
+      freeSlots++;
+    }
+    
+    Serial.print("Spot ");
+    Serial.print(slotIDs[i]);
+    Serial.print(": ");
+    if (dist < 0) {
+      Serial.print("No signal");
+    } else {
+      Serial.print(dist);
+      Serial.print("cm");
+    }
+    Serial.println(slots[i] ? " [TAKEN]" : " [EMPTY]");
+  }
+  
+  Serial.print("Free spots: ");
+  Serial.print(freeSlots);
+  Serial.println("/3");
+  
+  if (freeSlots == 0) {
+    digitalWrite(red, HIGH);
+    digitalWrite(green, LOW);
+  } else {
+    digitalWrite(green, HIGH);
+  }
+}
+
+float measureDistance(int sensor) {
+  digitalWrite(trigPins[sensor], LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPins[sensor], HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPins[sensor], LOW);
+  
+  long time = pulseIn(echoPins[sensor], HIGH, 30000);
+  
+  if (time <= 0) return -1.0;
+  
+  float distance = time * 0.0343 / 2;
+  return distance;
+}
+
+void openGate() {
+  if (!gateIsOpen) {
+    gateMotor.write(openAngle);
+    gateIsOpen = true;
+    gateTimer = millis();
+    
+    digitalWrite(green, HIGH);
+    digitalWrite(red, LOW);
+    
+    Serial.println("Gate is open");
+  }
+}
+
+void shutGate() {
+  if (gateIsOpen) {
+    gateMotor.write(closeAngle);
+    gateIsOpen = false;
+    
+    digitalWrite(green, LOW);
+    digitalWrite(red, HIGH);
+    
+    Serial.println("Gate closed");
+  }
+}
+
+void updateScreen() {
+  screen.clear();
+  screen.setCursor(0, 0);
+  
+  screen.print("Available:");
+  screen.setCursor(11, 0);
+  screen.print(freeSlots);
+  screen.print("/3");
+  
+  screen.setCursor(0, 1);
+  if (freeSlots == 0) {
+    screen.print("FULL - WAIT");
+  } else if (gateIsOpen) {
+    screen.print("ENTER NOW");
+  } else {
+    screen.print("SCAN CARD");
+  }
+}
+
+void setupFirebase() {
+  Serial.print("Connecting to cloud...");
+  
+  config.api_key = API_KEY;
+  config.database_url = DATABASE_URL;
+  auth.user.email = "";
+  auth.user.password = "";
+  
+  Firebase.reconnectWiFi(true);
+  dataStream.setBSSLBufferSize(4096, 1024);
+  dataStream.setResponseSize(4096);
+  config.token_status_callback = tokenStatusCallback;
+  
+  Firebase.begin(&config, &auth);
+  
+  Serial.print("Getting token...");
+  while ((auth.token.uid) == "") {
+    Serial.print(".");
+    delay(1000);
+  }
+  
+  firebaseConnected = true;
+  Serial.println(" Connected!");
+  
+  if (Firebase.RTDB.setString(&dataStream, "/system/online", "yes")) {
+    Serial.println("Status updated");
+  } else {
+    Serial.print("Problem: ");
+    Serial.println(dataStream.errorReason());
+  }
+  
+  Firebase.RTDB.setString(&dataStream, "/system/boot_time", getTime());
+  Firebase.RTDB.setString(&dataStream, "/system/device", WiFi.macAddress());
+}
+
+void sendToCloud() {
+  if (!firebaseConnected) return;
+  
+  for (int i = 0; i < 3; i++) {
+    String path = "/spots/" + slotIDs[i];
+    Firebase.RTDB.setBool(&dataStream, path + "/taken", slots[i]);
+    Firebase.RTDB.setString(&dataStream, path + "/checked", getTime());
+  }
+  
+  Firebase.RTDB.setInt(&dataStream, "/status/free", freeSlots);
+  Firebase.RTDB.setInt(&dataStream, "/status/total", 3);
+  Firebase.RTDB.setBool(&dataStream, "/gate/open", gateIsOpen);
+  Firebase.RTDB.setString(&dataStream, "/system/ping", getTime());
+}
+
+void readCloudCommands() {
+  if (!firebaseConnected) return;
+  
+  if (Firebase.RTDB.getBool(&dataStream, "/remote/open_gate")) {
+    if (dataStream.boolData()) {
+      openGate();
+      Firebase.RTDB.setBool(&dataStream, "/remote/open_gate", false);
+      Serial.println("Remote gate open");
+    }
+  }
+  
+  if (Firebase.RTDB.getBool(&dataStream, "/remote/lock_system")) {
+    systemActive = dataStream.boolData();
+    digitalWrite(red, systemActive ? HIGH : LOW);
+  }
+}
+
+void setupWiFi() {
+  Serial.print("Joining WiFi...");
+  screen.clear();
+  screen.print("Network:");
+  screen.print(wifiName);
+  
+  WiFi.begin(wifiName, wifiPass);
+  int tries = 0;
+  
+  while (WiFi.status() != WL_CONNECTED && tries < 20) {
+    delay(500);
+    Serial.print(".");
+    screen.print(".");
+    tries++;
+  }
+  
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println(" Connected");
+    Serial.print("My IP: ");
+    Serial.println(WiFi.localIP());
+    
+    screen.setCursor(0, 1);
+    screen.print(WiFi.localIP());
+    delay(2000);
+    
+    digitalWrite(blue, HIGH);
+  } else {
+    Serial.println(" Failed");
+    screen.clear();
+    screen.print("No internet");
+    screen.setCursor(0, 1);
+    screen.print("Local mode only");
+    delay(2000);
+  }
+}
+
+void fixWiFi() {
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println("WiFi dropped, reconnecting...");
+    WiFi.disconnect();
+    delay(1000);
+    WiFi.begin(wifiName, wifiPass);
+    
+    int retries = 0;
+    while (WiFi.status() != WL_CONNECTED && retries < 10) {
+      delay(500);
+      Serial.print(".");
+      retries++;
+    }
+    
+    if (WiFi.status() == WL_CONNECTED) {
+      Serial.println("\nBack online!");
+      digitalWrite(blue, HIGH);
+    } else {
+      Serial.println("\nStill offline");
+      digitalWrite(blue, LOW);
+    }
+  }
+}
+
+void checkButton() {
+  if (digitalRead(button) == LOW) {
+    delay(50);
+    if (digitalRead(button) == LOW) {
+      Serial.println("Button pressed");
+      
+      if (freeSlots > 0) {
+        openGate();
+        shortBeep();
+        screen.clear();
+        screen.print("Manual control");
+        screen.setCursor(0, 1);
+        screen.print("Opening gate");
+        delay(1000);
+      } else {
+        errorBeep();
+        screen.clear();
+        screen.print("Manual control");
+        screen.setCursor(0, 1);
+        screen.print("Lot is full");
+        delay(2000);
+      }
+      
+      while (digitalRead(button) == LOW) {
+        delay(10);
+      }
+    }
+  }
+}
+
+void shortBeep() {
+  tone(buzzer, 1000, 100);
+  delay(150);
+  tone(buzzer, 1500, 100);
+  noTone(buzzer);
+}
+
+void errorBeep() {
+  tone(buzzer, 300, 500);
+  delay(500);
+  noTone(buzzer);
+}
+
+String getTime() {
+  unsigned long seconds = millis() / 1000;
+  unsigned long minutes = seconds / 60;
+  unsigned long hours = minutes / 60;
+  unsigned long days = hours / 24;
+  
+  char timeString[30];
+  sprintf(timeString, "Day %lu, %02lu:%02lu:%02lu", 
+          days, hours % 24, minutes % 60, seconds % 60);
+  return String(timeString);
+}
