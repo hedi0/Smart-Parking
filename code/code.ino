@@ -60,3 +60,51 @@ int badAttempts = 0;
 String lastEntry = "";
 bool firebaseConnected = false;
 
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("Starting Smart Parking System...");
+  
+  Wire.begin();
+  screen.init();
+  screen.backlight();
+  screen.clear();
+  screen.setCursor(0, 0);
+  screen.print("Booting System");
+  screen.setCursor(0, 1);
+  screen.print("Please wait...");
+  
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT);
+  pinMode(blue, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(button, INPUT_PULLUP);
+  
+  gateMotor.attach(servoPin);
+  gateMotor.write(closeAngle);
+  
+  for (int i = 0; i < 3; i++) {
+    pinMode(trigPins[i], OUTPUT);
+    pinMode(echoPins[i], INPUT);
+    digitalWrite(trigPins[i], LOW);
+  }
+  
+  SPI.begin(18, 19, 23, RFID_SS);
+  rfid.PCD_Init();
+  rfid.PCD_SetAntennaGain(rfid.RxGain_max);
+  
+  setupWiFi();
+  setupFirebase();
+  
+  digitalWrite(red, HIGH);
+  digitalWrite(green, LOW);
+  digitalWrite(blue, HIGH);
+  
+  shortBeep();
+  screen.clear();
+  screen.print("Ready to scan");
+  screen.setCursor(0, 1);
+  screen.print("Place card here");
+  Serial.println("System is running");
+}
+
