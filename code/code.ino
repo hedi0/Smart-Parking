@@ -29,3 +29,33 @@ const int red = 4;
 const int green = 2;
 const int blue = 15;
 const int button = 0;
+
+// Firebase objects
+FirebaseData dataStream;
+FirebaseAuth auth;
+FirebaseConfig config;
+
+// Hardware objects
+LiquidCrystal_I2C screen(0x27, 16, 2);
+Servo gateMotor;
+MFRC522 rfid(RFID_SS, RFID_RST);
+
+// System state
+bool slots[3] = {false, false, false};
+int freeSlots = 3;
+String slotIDs[3] = {"A1", "B2", "C3"};
+bool gateIsOpen = false;
+bool systemActive = true;
+unsigned long gateTimer = 0;
+const unsigned long autoClose = 10000;
+String allowedCards[] = {"04 5A 1C 93 42 68 80", "04 B5 1C 93 42 68 80", "04 64 1C 93 42 68 80"};
+const int cardCount = 3;
+unsigned long lastSensorCheck = 0;
+const unsigned long sensorDelay = 2000;
+unsigned long lastCardCheck = 0;
+const unsigned long cardDelay = 500;
+int vehicleCount = 0;
+int badAttempts = 0;
+String lastEntry = "";
+bool firebaseConnected = false;
+
