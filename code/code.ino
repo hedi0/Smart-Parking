@@ -168,3 +168,32 @@ void scanRFID() {
   rfid.PCD_StopCrypto1();
 }
 
+void grantAccess(String card) {
+  Serial.println("Access approved");
+  shortBeep();
+  
+  if (freeSlots > 0) {
+    openGate();
+    vehicleCount++;
+    lastEntry = getTime();
+    
+    if (firebaseConnected) {
+      Firebase.RTDB.setInt(&dataStream, "/stats/authorized_entries", vehicleCount);
+      Firebase.RTDB.setString(&dataStream, "/logs/last_valid", card + " @ " + lastEntry);
+    }
+    
+    screen.clear();
+    screen.print("Welcome!");
+    screen.setCursor(0, 1);
+    screen.print("Gate opening");
+    delay(1500);
+  } else {
+    screen.clear();
+    screen.print("Valid card");
+    screen.setCursor(0, 1);
+    screen.print("NO SPACE LEFT");
+    errorBeep();
+    delay(2000);
+  }
+}
+
