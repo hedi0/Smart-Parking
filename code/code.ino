@@ -108,3 +108,30 @@ void setup() {
   Serial.println("System is running");
 }
 
+void loop() {
+  unsigned long now = millis();
+  
+  if (now - lastCardCheck >= cardDelay) {
+    lastCardCheck = now;
+    scanRFID();
+  }
+  
+  if (now - lastSensorCheck >= sensorDelay) {
+    lastSensorCheck = now;
+    checkSlots();
+    sendToCloud();
+    updateScreen();
+    
+    if (gateIsOpen && (now - gateTimer >= autoClose)) {
+      shutGate();
+    }
+  }
+  
+  checkButton();
+  readCloudCommands();
+  
+  if (WiFi.status() != WL_CONNECTED) {
+    fixWiFi();
+  }
+}
+
