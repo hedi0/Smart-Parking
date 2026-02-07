@@ -357,5 +357,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- ESP32 community for excellent documentation
-- Frbte frbus clud ei
+- ESP32 community for excellent documentrbtbusi
