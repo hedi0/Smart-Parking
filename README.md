@@ -5,6 +5,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Version](https://img.shields.io/badge/Version-2.0.0-blue)
 
+![Project Cover](/images/smart_parking_cover.png)
+
 &#x20; &#x20;
 
 A complete IoT-based smart parking system using an ESP32 microcontroller with RFID authentication, ultrasonic sensors, a servo‑controlled gate, and Firebase Realtime Database integration for real‑time monitoring.
