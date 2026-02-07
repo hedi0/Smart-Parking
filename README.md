@@ -352,4 +352,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/hedi0/Smart-Parking/issues)
-- **Email**: YourEmail@example.comuenaio*:[ii(tts/gihbmhd0SatPrigw
+- **Email**: YuEaeaplecmeoitsghhaiw
