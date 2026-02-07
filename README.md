@@ -223,3 +223,28 @@ For production, implement proper authentication
 4. Click Upload (→ button)
 ```
 
+### 2. Initial Setup Process
+After uploading:
+   1- Open Serial Monitor (Tools → Serial Monitor, 115200 baud)
+   2- Watch boot process:
+   ```txt
+    Starting Smart Parking System...
+    Joining WiFi...
+    Connected!
+    My IP: 192.168.1.100
+    Connecting to Firebase...
+    Connected!
+    System is running
+   ```
+   3- System is ready when LCD shows "Ready to scan"
+### 3. Hardware Assembly Tips
+1 - Power Connections:
+- Servo motor needs 5V (don't power from ESP32 3.3V)
+- Use external 5V supply for servo
+-Connect all GNDs together
+
+2 - Sensor Placement:
+- Mount ultrasonic sensors 30-50cm above ground
+- Angle slightly downward (15-20°)
+- Test with actual vehicle placement
+
