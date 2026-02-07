@@ -212,3 +212,14 @@ Go to Rules tab and set:
 > ⚠️ Secure your rules before production use.
 For production, implement proper authentication
 
+## 📥 Installation
+
+### 1. Upload Code to ESP32
+```bash
+# Using Arduino IDE:
+1. Open `code.ino` in Arduino IDE
+2. Select Board: "ESP32 Dev Module"
+3. Select correct COM port
+4. Click Upload (→ button)
+```
+
