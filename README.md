@@ -303,3 +303,19 @@ To control system remotely:
 | **Firebase Error** | Wrong API key | Regenerate Firebase Web API Key |
 | | Database rules | Set rules to public for testing |
 
+### Serial Debug Commands
+Monitor these messages in Serial Monitor (115200 baud):
+- `Card detected: XX XX XX XX` - Shows scanned RFID UID
+- `Spot A1: 15.3cm [TAKEN]` - Ultrasonic sensor readings
+- `Free spots: 2/3` - Current availability
+- `WiFi dropped, reconnecting...` - Network issues
+
+## 📁 Project Structure
+
+```
+Smart-Parking/
+├── code.ino # Main Arduino sketch
+├── LICENSE # License file 
+└── README.md # This documentation
+```
+
