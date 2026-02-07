@@ -328,3 +328,9 @@ Smart-Parking/
 - [ ] **Solar Power** - Self-sufficient energy system
 - [ ] **Multi-language Support** - LCD display in multiple languages
 
+### Current Limitations
+- Maximum 3 parking spots (expandable with multiplexers)
+- No battery backup (power outage resets system)
+- Basic security (enhance with encryption)
+- Local network only (consider port forwarding for remote)
+
