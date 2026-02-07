@@ -286,3 +286,20 @@ To control system remotely:
    - **`/remote/open_gate`** = `true` (opens gate immediately)
    - **`/remote/lock_system`** = `true` (disables system)
 
+## 🔍 Troubleshooting
+
+### Common Issues & Solutions
+
+| Problem | Possible Cause | Solution |
+|---------|---------------|----------|
+| **No WiFi Connection** | Wrong credentials | Check SSID/password |
+| | Weak signal | Move closer to router |
+| **RFID Not Reading** | Card not in whitelist | Add card UID to allowedCards[] |
+| | Distance too far | Keep card within 5cm |
+| **Sensors Show Wrong** | Incorrect wiring | Check trigger/echo pins |
+| | Objects too close | Ensure 20cm clearance |
+| **Gate Not Moving** | Servo not powered | Connect servo to 5V external supply |
+| | Wrong GPIO pin | Verify servo connected to GPIO13 |
+| **Firebase Error** | Wrong API key | Regenerate Firebase Web API Key |
+| | Database rules | Set rules to public for testing |
+
