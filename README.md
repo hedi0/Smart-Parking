@@ -356,4 +356,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Documentation**: [Wiki](https://github.com/hedi0/Smart-Parking/wiki)
 
 ## 🙏 Acknowledgmen
-- Sji2itldui
+- Sujijujiujiuji
