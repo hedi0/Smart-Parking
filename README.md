@@ -248,3 +248,21 @@ After uploading:
 - Angle slightly downward (15-20°)
 - Test with actual vehicle placement
 
+3 - RFID Reader:
+- Place near entrance (5-10cm range)
+- Protect from weather if outdoors
+- Avoid metal interference
+
+## 🚀 Usage
+
+### System Operation Modes
+
+| Mode | LED Color | Buzzer | LCD Display |
+|------|-----------|--------|-------------|
+| **Ready** | Blue | - | "Ready to scan" |
+| **Valid Card** | Green | Short beep | "Welcome! Gate opening" |
+| **Invalid Card** | Red flashing | Long beep | "Card not recognized" |
+| **Parking Full** | Red solid | Error beep | "NO SPACE LEFT" |
+| **Gate Open** | Green solid | - | "ENTER NOW" |
+| **No WiFi** | Blue off | - | "Local mode only" |
+
