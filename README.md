@@ -266,3 +266,23 @@ After uploading:
 | **Gate Open** | Green solid | - | "ENTER NOW" |
 | **No WiFi** | Blue off | - | "Local mode only" |
 
+### Manual Controls
+- **RFID Card**: Scan to open gate (if spots available)
+- **Button Press**: Manual gate override (hold for 2 seconds)
+- **Serial Commands**: Send commands via Serial Monitor
+
+### Firebase Monitoring
+Access your Firebase console to monitor:
+- **`/spots/A1`**, **`/spots/B2`**, **`/spots/C3`** - Individual slot status
+- **`/status/free`** - Number of available spots
+- **`/gate/open`** - Gate status (true/false)
+- **`/stats/authorized_entries`** - Successful entries count
+- **`/logs/last_valid`** - Last valid entry timestamp
+
+### Remote Commands via Firebase
+To control system remotely:
+1. Go to Firebase Console → Realtime Database
+2. Set these paths:
+   - **`/remote/open_gate`** = `true` (opens gate immediately)
+   - **`/remote/lock_system`** = `true` (disables system)
+
