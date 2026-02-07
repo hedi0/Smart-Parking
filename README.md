@@ -354,3 +354,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Email**: YourEmail@example.com
 - **Documentation**: [Wiki](https://github.com/hedi0/Smart-Parking/wiki)
 
+## 🙏 Acknowledgments
+
+- ESP32 community for excellent documentation
+- Firebase team for robust cloud services
+- All contributors who have helped improve this project
