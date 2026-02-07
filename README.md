@@ -359,4 +359,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - ESP32 community for excellent documentation
 - Firebase team for robust cloud services
-- All contributors how
+- Aw
