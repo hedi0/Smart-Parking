@@ -344,3 +344,13 @@ Smart-Parking/
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/hedi0/Smart-Parking/issues)
+- **Email**: YourEmail@example.com
+- **Documentation**: [Wiki](https://github.com/hedi0/Smart-Parking/wiki)
+
