@@ -355,5 +355,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Email**: YourEmail@example.com
 - **Documentation**: [Wiki](https://github.com/hedi0/Smart-Parking/wiki)
 
-## 🙏 Acknowledgmen
-- Sujijujiujiuji
+## 🙏 Acknowlilil
