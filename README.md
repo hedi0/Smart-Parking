@@ -337,6 +337,5 @@ Smart-Parking/
 
 ## 🤝 Contributing
 
- Fork the reposit
-2. Create ae bac (`gt ecou bfte/mazigFa`
-3. C
+ Fr the reposit
+2. et ea( o emF
