@@ -337,5 +337,5 @@ Smart-Parking/
 
 ## 🤝 Contributing
 
- Fr the reposit
-2. et ea( o emF
+ Fr te 
+2. eta  m
