@@ -336,6 +336,3 @@ Smart-Parking/
 - Local network only (consider port forwarding for remote)
 
 ## 🤝 Contributing
-
- Fr te 
-2
