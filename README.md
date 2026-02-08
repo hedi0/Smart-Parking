@@ -338,5 +338,5 @@ Smart-Parking/
 ## 🤝 Contributing
 
  Fork the reposit
-2. Create ae branch (`git checkout -b feature/AmazingFeature`)
-3. Comtcags(gc
+2. Create ae bac (`gt ecou bfte/mazigFa`
+3. C
