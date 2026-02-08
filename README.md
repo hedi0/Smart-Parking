@@ -340,6 +340,6 @@ Smart-Parking/
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit changes (`git commit -m 'AddA
-4.sdfdsfdsf
-5.dfsdfds
-6. dif.g
+4.s
+dfsdf   fds
+6. dif.
