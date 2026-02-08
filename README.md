@@ -339,5 +339,5 @@ Smart-Parking/
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. uht ranh `gi uhorgn faure/AmznFtr`
+3. Commit changes (`git commit -m 'Add AmazingFea
+4. tr')4 utrn giuog fue/Amnt`
