@@ -339,8 +339,4 @@ Smart-Parking/
 
  Fork the reposit
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'AddA
-
-
-d
-d
+3. Commit changes (`gicmi m'dA
