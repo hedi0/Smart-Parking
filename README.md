@@ -345,5 +345,4 @@ Smart-Parking/
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-## 📄 License
-hs poetisicne ne h I ies  e h [LICENSE](LICENSE) ie frd
+## 📄 Li [LICENSE](LICENSE) i
