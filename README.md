@@ -343,5 +343,4 @@ Smart-Parking/
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) frdtiegei.
-LIL
+SeeCNRIUIGmd(NTvhghm)ftee.LL
