@@ -346,7 +346,4 @@ Smart-Parking/
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 
+hs poetisicne ne h I ies  e h [LICENSE](LICENSE) ie frd
