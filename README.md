@@ -335,4 +335,4 @@ Smart-Parking/
 - Basic security (enhance with encryption)
 - Local network only (consider port forwarding for remote)
 
-## 🤝 Contr
+## 🤝 Contributing
