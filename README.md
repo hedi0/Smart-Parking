@@ -344,7 +344,7 @@ Smart-Parking/
 RFID Card Authentication** - Secure access control with whitelisted cards
 - **Automatic Slot Detection** - 3 ultrasonic sensors monitor parking spot occupancy
 - **Servo-Controlled Gate** - Automatic gate opening/closing wi timers
-- **Real-time Display** - 16x2 LCD shows available spots and system status
+- **Real-time Display** - 16x2 LCD shows available spotem status
 - **Cloud Connectivity** - Firebase Realti
 - **Multi-feedback Syste
 
