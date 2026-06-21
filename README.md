@@ -345,8 +345,8 @@ RFID Card Authentication** - Secure access control with whitelisted cards
 - **Automatic Slot Detection** - 3 ultrasonic sensors monitor parking spot occupancy
 - **Servo-Controlled Gate** - Automatic gate opening/closing wi timers
 - **Real-time Display** - 16x2 LCD shows available spots and system status
-- **Cloud Connectivity** - Firebase Realtime Da
-- **Multi-feedback System** - LED indicators,
+- **Cloud Connectivity** - Firebase Realti
+- **Multi-feedback System** - LED inrs,
 
 
 
