@@ -346,7 +346,7 @@ RFID Card Authentication** - Secure access control with whitelisted cards
 - **Servo-Controlled Gate** - Automatic gate opening/closing wi timers
 - **Real-time Display** - 16x2 LCD shows available spots and system status
 - **Cloud Connectivity** - Firebase Realti
-- **Multi-feedback System** - LED inrs,
+- **Multi-feedback Syste
 
 
 
