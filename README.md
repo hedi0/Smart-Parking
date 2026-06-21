@@ -334,3 +334,43 @@ Smart-Parking/
 - No battery backup (power outage resets system)
 - Basic security (enhance with encryption)
 - Local network only (consider port forwarding for remote)
+
+
+
+
+
+
+
+RFID Card Authentication** - Secure access control with whitelisted cards
+- **Automatic Slot Detection** - 3 ultrasonic sensors monitor parking spot occupancy
+- **Servo-Controlled Gate** - Automatic gate opening/closing with safety timers
+- **Real-time Display** - 16x2 LCD shows available spots and system status
+- **Cloud Connectivity** - Firebase Realtime Database for remote monitoring
+- **Multi-feedback System** - LED indicators, buzzer sounds, and visual display
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
