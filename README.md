@@ -341,10 +341,9 @@ Smart-Parking/
 
 
 
-RFID Card Auion** - Secure access control with whitelisted cards
-- **Automatic Slot Detection** - 3 ultrasonihhyg guyg ugguyg uyg spot occupancy
-- **Servo-Controlled Gate** - Automatic gate opening/closing
-- **Real-t** - 16x2 LCD shows avai
+RFID Card Auion** - Secure access control with whitelisted cards bjhuftf uftuftyfy here red kjhjygbyj
+- **Automatic Slot Detection** - 3 ultrasonihhyg guyg ugguyg uyg spot occupancy gugygy ccrdsszr fgrg
+- **Servo-Controlled Gate** - Automatic gate opening/closvhgvtftyftyf tfytftyfytftyf tftyftyfy shows avai
 
 
 
