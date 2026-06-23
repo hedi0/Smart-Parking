@@ -342,8 +342,8 @@ Smart-Parking/
 
 
 RFID Card Auion** - Secs b ufhe red kjyj
-- **Autoot Deteg gug uyg spc gygy ccrdsszr fgrg
-- **Servoonate** - Atyhows 
+- **Autoot Detg uyg spc gygy ccrdsszr fgrg
+- **Servoonate** - 
 
 
 
