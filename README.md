@@ -341,8 +341,8 @@ Smart-Parking/
 
 
 
-RFID Card Auion** - Secure  sted cards bjhuftf ufhere red kjhjygbyj
-- **Autoot Detectioyg gugguyg uyg spcupancy gugygy ccrdsszr fgrg
+RFID Card Auion** - Securrds bjhuftf ufhere red kjhjygbyj
+- **Autoot Detectioyg gug uyg spc gugygy ccrdsszr fgrg
 - **Servoonate** - Atyfy shows 
 
 
