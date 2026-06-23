@@ -343,7 +343,7 @@ Smart-Parking/
 
 RFID Card Auion** - Secure access control with sted cards bjhuftf uftuftyfy here red kjhjygbyj
 - **Automatic Slot Detection** - 3 ultrasonihhyg guyg ugguyg uyg spot occupancy gugygy ccrdsszr fgrg
-- **Servo-Conate** - Automatic gate opening/closvhgvtftyftyf tfytftyfytftyf tftyftyfy shows avai
+- **Servo-Conate** - Automatic gate opening tfytftyfytftyf tftyftyfy shows avai
 
 
 
