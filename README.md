@@ -342,7 +342,7 @@ Smart-Parking/
 
 
 RFID Card Auion** - Secs b ufhe red kjyj
-- **Autoot Detg uyg spc gygy ccrdsszr fgrg
+- **Autoot Detg urdsszr fgrg
 - **Servoonate** - 
 
 
