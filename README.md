@@ -341,9 +341,9 @@ Smart-Parking/
 
 
 
-RFID Card Auion** - Secure access control with sted cards bjhuftf uftuftyfy here red kjhjygbyj
+RFID Card Auion** - Secure acceontrol with sted cards bjhuftf uftuftyfy here red kjhjygbyj
 - **Autoot Detection** - 3 ultrasonihhyg guyg ugguyg uyg spot occupancy gugygy ccrdsszr fgrg
-- **Servo-Conate** - Automatic ytftyfytftyf tftyftyfy shows avai
+- **Servoonate** - Automaic yftyfytyfy shows avai
 
 
 
