@@ -341,7 +341,7 @@ Smart-Parking/
 
 
 
-Card Auion*
+Card Au
 
 
 
