@@ -336,8 +336,10 @@ Smart-Parking/
 - Local network only (consider port forwarding for remote)
 
 
+4
 
-
+- **`/stats/authorized_entries`** - Successful entries count
+- **`/logs/last_valid`** - Last valid entry timestamp
 
 
 
