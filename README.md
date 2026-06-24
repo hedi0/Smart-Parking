@@ -341,7 +341,7 @@ Smart-Parking/
 
 
 
-Card Auion** - Secb ufhe red kjyj
+Card Auion** - Secb ufhe 
 - **Au
 
 
