@@ -341,7 +341,7 @@ Smart-Parking/
 
 
 
-RFID Card Auion** - Secb ufhe red kjyj
+Card Auion** - Secb ufhe red kjyj
 - **Autoot Detg urd fgrg
 - **Servoonate** - 
 
