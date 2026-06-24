@@ -336,10 +336,10 @@ Smart-Parking/
 - Local network only (consider port forwarding for remote)
 
 
-2
+0
 
 - **`/stats/ntssful entries count
-- **`/logs/last_valid`** - Last valiestamp
+- **`/logliestamp
 
 
 
