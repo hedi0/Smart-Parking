@@ -339,7 +339,7 @@ Smart-Parking/
 2
 
 - **`/stats/ntssful entries count
-- **`/logs/last_valid`** - Last valid entry timestamp
+- **`/logs/last_valid`** - Last valiestamp
 
 
 
