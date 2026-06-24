@@ -341,9 +341,6 @@ Smart-Parking/
 
 
 
-Card Au
-
-
 
 
 
