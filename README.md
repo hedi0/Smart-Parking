@@ -342,7 +342,7 @@ Smart-Parking/
 
 
 Card Auion** - Secb ufhe red kjyj
-- **Autoot Detg urd fgrg
+- **Autoot Detg
 - **Servoonate** - 
 
 
