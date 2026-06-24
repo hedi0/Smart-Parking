@@ -342,8 +342,6 @@ Smart-Parking/
 
 
 Card Auion** - Secb ufhe 
-- **Au
-
 
 
 
