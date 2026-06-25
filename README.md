@@ -337,7 +337,7 @@ Smart-Parking/
 
 
 
-- **`/stats/ntssful entries count**`
+  /statsssful entries coun
 
 
 
