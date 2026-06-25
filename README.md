@@ -336,8 +336,7 @@ Smart-Parking/
 - Local network only (consider port forwarding for remote)
 
 
-
-  /statsssful entries coun
+  /statssntries c
 
 
 
