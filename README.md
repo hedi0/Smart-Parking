@@ -339,7 +339,7 @@ Smart-Parking/
 0
 
 - **`/stats/ntssful entries count
-- **`/logliestamp
+- **`/log
 
 
 
