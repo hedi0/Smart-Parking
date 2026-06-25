@@ -334,3 +334,10 @@ Smart-Parking/
 - No battery backup (power outage resets system)
 - Basic security (enhance with encryption)
 - Local network only (consider port forwarding for remote)
+
+
+
+
+
+
+578578575rqercq4e87ctdxhr
