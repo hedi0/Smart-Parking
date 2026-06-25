@@ -336,10 +336,8 @@ Smart-Parking/
 - Local network only (consider port forwarding for remote)
 
 
-0
 
-- **`/stats/ntssful entries count
-- **`/log
+- **`/stats/ntssful entries count**`
 
 
 
