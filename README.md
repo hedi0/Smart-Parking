@@ -1,6 +1,5 @@
 # 🚗 Smart Parking System - ESP32 & Firebase
 
-A complete IoT-based smart parking system using an ESP32 microcontroller with RFID authentication, ultrasonic sensors, 
 A complete IoT-based smart parking system using an ESP32 microcontroller with RFID authentication, ultrasonic sensors, a servo‑controlled gate, and Firebase Realtime Database integration for real‑time monitoring.
 
 ![ESP32 Smart Parking System](https://img.shields.io/badge/Platform-ESP32_Arduino-blue)
