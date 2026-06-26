@@ -7,12 +7,13 @@ A complete IoT-based smart parking system using an ESP32 microcontroller with RF
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Version](https://img.shields.io/badge/Version-2.0.0-blue)
 
-![Project Cover](/images/smart_parking_cover.png)
+
+&#x20; &#x20;
+## 📋 Table of Contents
+- [Features](#-features)
+- [Hardware Requirements](#-hardware-requirements)
+- [Schematic Diagram](#-schematic![Project Cover](/images/smart_parking_cover.png)
 -diagram)
-- [Software Setup](#-software-setup)
-- [Configuration](#-configuration)
-- [Firebase Setup](#-firebase-setup)
-- [Installation](#-installation)
 - [Usage](#-usage)
 - [Troubleshooting](#-troubleshooting)
 - [Project Structure](#-project-structure)
