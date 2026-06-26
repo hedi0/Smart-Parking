@@ -1,5 +1,6 @@
+# 🚗 Smart Parking System - ESP32 & Firebase
 
-
+A complete IoT-
 ![ESP32 Smart Parking System](https://img.shields.io/badge/Platform-ESP32_Arduino-blue)
 ![Firebase Integration](https://img.shields.io/badge/Cloud-Firebase_Realtime_DB-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
