@@ -22,7 +22,8 @@ A complete IoT-based smart parking system using an ESP32 microcontroller with RF
 - [Usage](#-usage)
 - [Troubleshooting](#-troubleshooting)
 - [Project Structure](#-project-structure)
-- 
+
+
 ## ✨ Features
 
 ### 🎯 Core Functionality
