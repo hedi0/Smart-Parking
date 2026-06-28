@@ -344,7 +344,7 @@ Smart-Parking/
  Serial Debug Commands
 Monitor these messages in Serial Monitor (115200 baud):
 - `Card detec: XX XX XX XX` -anned
-- `SpotAKEN]`Ultrasonic s
+- `SpotAKEN]`Ultr
 
 
 
