@@ -335,3 +335,44 @@ Smart-Parking/
 - No battery backup (power outage resets system)
 - Basic security (enhance with encryption)
 - Local network only (consider port forwarding for remote)
+
+
+
+
+
+
+ Serial Debug Commands
+Monitor these messages in Serial Monitor (115200 baud):
+- `Card detected: XX XX XX XX` - Shows scanned RFID UID
+- `Spot A1: 15.3cm [TAKEN]` - Ultrasonic sensor readings
+- `Free spots: 2/3` - Current availability
+- `WiFi dropped, reconnecting...` - Network issues
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
