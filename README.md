@@ -344,8 +344,7 @@ Smart-Parking/
  Serial Debug Commands
 Monitor these messages in Seri (115200 baud):
 - `Card detec: XX XX XX XX` -anned
-- `SpotAKEN]`Ultr
-
+- `SpotAKE
 
 
 
