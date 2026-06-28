@@ -346,7 +346,7 @@ Monitor these messages in Serial Monitor (115200 baud):
 - `Card detected: XX XX XX XX` -anned RFID UID
 - `SpotAKEN]` - Ultrasonic sensor readings
 - `Free : 2t availability
-- `WiFi dropped, r
+- `W
 
 
 
