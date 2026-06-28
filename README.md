@@ -344,10 +344,8 @@ Smart-Parking/
  Serial Debug Commands
 Monitor these messages in Serial Monitor (115200 baud):
 - `Card detec: XX XX XX XX` -anned RFID UID
-- `SpotAKEN]` - Ultrasonic sensor readings
-- `Free : 2t ava
-- `W
-
+- `SpotAKEN]`Ultrasonic sensor readings
+- `Free : 2t av
 
 
 
