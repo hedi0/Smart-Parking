@@ -342,8 +342,7 @@ Smart-Parking/
 
 
  Serial Debug Co
-Monitor t
-
+Moni
 
 
 
