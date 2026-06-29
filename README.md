@@ -343,8 +343,7 @@ Smart-Parking/
 
  Serial Debug Co
 Monitor these messages in Ser
-- `Card dete
-
+- `Car
 
 
 
