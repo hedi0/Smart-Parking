@@ -342,7 +342,7 @@ Smart-Parking/
 
 
  Serial Debug Co
-Monitor these messages in Seri (1152
+Monitor these messages in Ser
 - `Card dete
 
 
