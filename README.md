@@ -342,9 +342,7 @@ Smart-Parking/
 
 
  Serial Debug Co
-Monitor these messages i
-
-
+Monitor these messag
 
 
 
