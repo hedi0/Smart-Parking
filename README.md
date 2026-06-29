@@ -342,8 +342,7 @@ Smart-Parking/
 
 
  Serial Debug Co
-Monitor these messages in Ser
--
+Monitor these messages i
 
 
 
