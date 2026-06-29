@@ -343,9 +343,7 @@ Smart-Parking/
 
  Serial Debug Co
 Monitor these messages in Seri (115200 baud):
-- `Card detec: XX XX 
-- `Sp
-
+- `Card dete
 
 
 
