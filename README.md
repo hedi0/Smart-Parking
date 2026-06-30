@@ -340,7 +340,7 @@ Smart-Parking/
 
 
 ifications and remote control
-- [ ] **Payment Integration** - Automated billing system
+- [ **Payment Integration** - Automated bng system
 - [ ] **License Plate Recognition** - Camera-based entry
 - [ ] **Solar Power** - Self-sufficient energy system
 
