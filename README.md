@@ -340,9 +340,7 @@ Smart-Parking/
 
 
 ifications and remote control
-- [ **Payment Integration** - Automated m
-**Licenate Rentry
--  *f-suffi
+- [ *Payment Integration** - Autom
 
 
 
