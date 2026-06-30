@@ -342,7 +342,7 @@ Smart-Parking/
 ifications and remote control
 - [ **Payment Integration** - Automated m
 - ] **Licenate Reconition** - Camera-based entry
--  **Solar Power** - Self-sufficient en
+-  **Solar Power** - Self-suffi
 
 
 
