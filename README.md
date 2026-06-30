@@ -341,7 +341,7 @@ Smart-Parking/
 
 ifications and remote control
 - [ **Payment Integration** - Automated m
-**Licenate Reconition** - Camera-based entry
+**Licenate Rentry
 -  *f-suffi
 
 
