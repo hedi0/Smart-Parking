@@ -339,8 +339,7 @@ Smart-Parking/
 
 
 
-ifications and remote c
-
+ifications and
 
 
 
