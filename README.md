@@ -339,8 +339,6 @@ Smart-Parking/
 
 
 
-ific
-
 
 
 
