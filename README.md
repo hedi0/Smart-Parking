@@ -340,7 +340,7 @@ Smart-Parking/
 
 
 ifications and remote control
-- [ *Payment Integration** - Autom
+- [ *Payment Integration*m
 
 
 
